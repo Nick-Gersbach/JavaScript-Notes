@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Console</title>
+</head>
+<body>
+  <h1>JavaScript Developer Console</h1>
+  <!-- Notes
+  - The JS developer console is found in the browser dev tools. The console allows you to quickly test, output and debug js code directly in the browser before you write it in your app.
+
+  - Before Dev tools developers has to use alert to test things out which took forever.
+
+  - You can write and output new js scripts directy in the console. 
+
+  - You can select DOM elements in the console and style/manipulate them
+   -->
+  <script>
+  /*
+
+    Logging to the console
+
+  */
+
+ //Logging a string
+ console.log('Hello World');
+
+ //Logging numbers (integers)
+ console.log(123);
+
+ //Logging a Boolean (true/false)
+ console.log(true);
+
+ //Logging a variable
+ var greeting = 'Hello';
+ console.log(greeting);
+
+ //Logging an array
+console.log([1, 2, 3, 'Nick', 'Yadira', 'James', 4, 5, 6]);
+
+//Logging Objects (Object Literals)
+console.log({a:1, b:2})
+
+//Logging Tabular Data
+console.table({a:1, b:2});
+
+//Logging an Error
+console.error('This is an error!');
+
+//Logging a warning
+console.warn("I'm warning you!");
+
+//Clearing the console
+console.clear();
+
+//Timing how long a script takes to execute in the console
+console.time('Timer');
+console.log('Hi');
+console.log('Hi');
+console.log('Hi');
+console.log('Hi');
+console.log('Hi');
+console.log('Hi');
+console.log('Hi');
+console.log('Hi');
+console.log('Hi');
+console.timeEnd('Timer');
+
+  </script>
+</body>
+</html>

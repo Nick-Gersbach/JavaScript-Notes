@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Variables</title>
+</head>
+<body>
+  <h1>JavaScript Variables</h1>
+  <script>
+    /* Notes
+
+    var - The old way of declaring a variable. You will see this in older js legacy code. Variables declared with var can be initialzed and reassigned. var should not be used in newly coded apps.
+
+    let - Very similar to let. It can be reassigned and initialized just like var but should always be used instead of var in modern apps.
+
+    const - Cannot be reassigned or initialized. Should be used on any variable that will not change which is most of the time. Remember that data within an object literal can be changed while using const but you can't change the value of the object literal itself. In arrays you can change data within the array by using methods like push and pop but you can't change the name of the array or data within it without using a method. 
+
+    //Variable Naming Rules
+
+   - JS variables can only contain the following...
+    
+    letters
+    numbers
+    _
+    $
+
+    Any other chracters may not be is a variable.
+
+    Variables can not start with numbers
+
+    //Naming Multiword Variables
+
+    - You can name multiword variables several different ways. They are...
+
+    Camelcase - firstName - This is the most common naming convention
+
+    Pascal Case - FirstName - This can also be used but it's mostly used in creating classes and constructors in ES6 JS
+
+    Underscore - first_name - This is usually used in php coding
+
+    lowercase - firstname - Can be used but not recommended
+
+    Money sign - $firstName - This is typically used in jquery
+    */
+
+   //Reassigning values with let and var
+
+   let name = 'Nick';
+   console.log(name);
+   name = 'Steve';
+   console.log(name);
+
+   var lastName = 'Gersbach';
+   console.log(lastName);
+   lastName = 'Smith';
+   console.log(lastName);
+
+//Using const with an object literal
+
+const person = {
+  name: 'Nick',
+  age: 29,
+  job: 'warehouse'
+}
+
+console.log(person);
+
+//You may change the data within the object as long as you don't change person to a different name.
+
+//changing data in an object
+person.job = 'Web Developer';
+console.log(person);
+
+//Using const with an array
+const numbers = [1,2,3,4,5,6];
+console.log(numbers);
+
+//Adding a numbers to a const array with a method (this is legal)
+numbers.push(7);
+console.log(numbers);
+
+//You can't do this 
+// const numbers = [1,2,3,4,5,6,7,8];
+
+
+  </script>
+</body>
+</html>
