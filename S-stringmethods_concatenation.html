@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String Methods & Concatenation</title>
+</head>
+<body>
+  <h1>String Methods & Concatenation</h1>
+  <!-- Notes
+  - Like with numbers, strings also have properties and methods built into JS that allow us to manipulate and extract data from them.
+   -->
+   <script>
+     const firstName = 'Nick';
+     const lastName = 'Gersbach';
+     const otherName = 'William';
+     const str = 'This is a string that I just made up.';
+     let val;
+
+     //Add 2 strings together (no space)
+     val = firstName + lastName;
+     console.log(val);
+
+     //Add 2 strings together (space included)
+     val = firstName + ' ' + lastName;
+     console.log(val);
+
+     //Append a string (add on to)
+     val = 'Nick ';
+     val += 'Gersbach';
+     console.log(val);
+
+     //Create a sentecnce with concatenation
+     val = 'Hello, first name is ' + firstName + ' and my last name is ' + lastName + '.';
+     console.log(val);
+
+     //Escaping using single quotes in double quotes
+     val = "I can't believe you did that!";
+     console.log(val);
+
+     //Escaping using \
+     val = 'I can\'t beleive you did that!';
+     console.log(val);
+
+     /*
+     
+     String Properties and Methods
+     
+     */
+
+    //length - Get how many chracters are in a string
+    val = lastName.length;
+    console.log(val);
+
+    //concat - concatenating strings using a method
+    val = firstName.concat(' ', lastName);
+    console.log(val);
+
+    //Change case
+    val = firstName.toUpperCase();
+    console.log(val);
+
+    val = lastName.toLowerCase();
+    console.log(val);
+
+    //indexOf() - get numbered position of a chracter (starts at 0)
+    val = firstName.indexOf('N');
+    console.log(val);
+
+    //lastIndexOf() - get the last numbered position of a chracter (starts at 0)
+    val = otherName.lastIndexOf('l');
+    console.log(val);
+
+    //charAt() - Enter a number and return what letter is in that position. If the number doesn't exist you will get -1
+    val = firstName.charAt(2);
+    console.log(val);
+
+    //Get the last character of a string
+    val = firstName.charAt(firstName.length - 1);
+    console.log(val);
+
+    //substring - pull a string out of a string
+    val = lastName.substring(0, 4);
+    console.log(val);
+
+    //slice() - mostly used in array but works like substring
+    val = lastName.slice(0, 4);
+    console.log(val);
+
+    //With slice() you can use negative numbers to take characters from the back or end of a string
+
+    //split() seperate strings by spaces or characters
+    val = str.split(' ');
+    console.log(val);
+
+    //Replace - Replace one word in a string with another
+    val = str.replace('This', 'Poop');
+    console.log(val);
+
+    //includes - gives you a true or false value based on if something is included in a string
+    val = firstName.includes('Nick');
+    console.log(val);
+
+    val = firstName.includes('fu');
+    console.log(val);
+
+   </script>
+</body>
+</html>
