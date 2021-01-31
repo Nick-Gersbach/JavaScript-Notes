@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Template Literals (Template Strings)</title>
+</head>
+<body>
+  <h1>JS Template Literals (Template Strings)</h1>
+  <!-- Notes
+  - Template literals (template strings) are a faster/more organized way of writing and concatenating strings
+
+  - Template strings allow you to write multiline strings and let you embed variables, expressions, functions, and if else statements within them.
+
+  - Template strings use backticks `` instead of quotes
+   -->
+   <script>
+     const name = "Nick";
+     const age = 29;
+     const job = 'Web Developer';
+     const city = 'Phoenix';
+     let html;
+
+     //Concatenating and inserting html without template strings (The old ES5 way)
+
+     html = '<ul>' +
+            '<li>Name: ' + name + '</li>' +
+            '<li>Age: ' + age + '</li>' +
+            '<li>Job: ' + job + '</li>' +
+            '<li>City: ' + city + '</li>' +
+            '</ul>'
+    
+    //Printing the list to the browser window
+    document.body.innerHTML = html;
+
+  /*
+  
+  The Same List with Template Strings
+  
+  */
+
+ function hello() {
+   return 'Hello';
+ }
+
+ html = `<ul>
+          <li>Name: ${name}</li>
+          <li>Age: ${age}</li>
+          <li>Job: ${job}</li>
+          <li>City: ${city}</li>
+          <li>Expression: ${2 + 2}</li>
+          <li>Function: ${hello()}</li>
+          <li>If/Else: ${age > 30 ? 'Over 30' : 'Under 30'}</li>
+        </ul>
+            `;
+
+                document.body.innerHTML = html;
+   </script>
+</body>
+</html>
