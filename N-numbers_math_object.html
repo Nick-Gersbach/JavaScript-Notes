@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numbers & The Math Object</title>
+</head>
+<body>
+  <h1>Numbers & The Math Object</h1>
+  <!-- Notes
+  - JS allows us to solve math equations and manipulate numbers with built in functions also called methods.
+
+  - There are many built in methods. This lesson is going to teach us about the Math Object
+
+  - Math is an object which means that it has properties and methods that can be used with it.
+
+  PROPERTY - A property is an attribute
+
+  METHOD - A method is a function inside of an object
+   -->
+   <script>
+     //Playing with the Math Object
+
+     const num1 = 100;
+     const num2 = 50;
+     let val;
+
+     /*
+     
+     Simple Math with Numbers
+     
+     */
+
+     //Addition
+     val = num1 + num2;
+     console.log(val);
+
+     //Subtraction
+     val = num1 - num2;
+     console.log(val);
+
+     //Multiplication
+     val = num1 * num2;
+     console.log(val);
+
+     //Division
+     val = num1 / num2;
+     console.log(val);
+
+      /*
+     
+     Using Math to manipulate numbers
+     
+     */
+
+    //Get Pi
+    val = Math.PI;
+    console.log(val);
+
+    //Eulers Number
+    val = Math.E;
+    console.log(val);
+
+    //Round a number
+    val = Math.round(4.2);
+    console.log(val);
+    val = Math.round(4.6);
+    console.log(val);
+
+    //Round Number up by default (ceil)
+    val = Math.ceil(7.2);
+    console.log(val);
+
+     //Round Number down by default (floor)
+    val = Math.floor(9.9);
+    console.log(val);
+
+    //Get Square Root of a number
+    val = Math.sqrt(64);
+    console.log(val);
+
+    //Get the absolute number
+    val = Math.abs(-3);
+    console.log(val);
+
+    //Get the power of a number
+    val = Math.pow(8, 2); //Means 8 to the 2nd power
+    console.log(val);
+
+    //Get the largest number in a sequence
+    val = Math.max(2,33,45,66,21,3,6,9);
+    console.log(val);
+
+     //Get the smallest number in a sequence
+    val = Math.min(2,33,45,66,21,3,6,9);
+    console.log(val);
+
+    //Generate a random decimal number
+    val = Math.random();
+    console.log(val);
+
+    //Generate a random number with a decimal attached
+    val = Math.random() * 20;
+    console.log(val);
+
+
+      //Generate a random number without a decimal between 1-20
+    val = Math.floor(Math.random() * 20 + 1);
+    console.log(val);
+   </script>
+</body>
+</html>
