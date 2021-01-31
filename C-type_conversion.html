@@ -9,9 +9,91 @@
   <h1>JavaScript Type Conversion</h1>
   <!-- Notes 
 
+  When you build applications their will be many times when you have to parse data and convert it into a new data type. This is where type conversion comes in.
+
+  The most common examples of type conversion will be strings to numbers and numbers to strings.
    -->
    <script>
+     let val;
+
+     //Number to string
+     val = 5;
+
+     console.log(val);
+     console.log(typeof val);
+     console.log(val.length);
+
+     //Now we'll actually convert 5 into a string with the string function
+     val = String(5);
+
+     console.log(val);
+     console.log(typeof val);
+     console.log(val.length);
+
+     //You can also use String() on expressions
+     val = String(4 + 4);
+     console.log(val);
+     console.log(typeof val);
+
+     //Boolean to string
+     val = String(true);
+     console.log(typeof val);
+
+     //Date to string
+     val = String(new Date());
+     console.log(val);
+     console.log(typeof val);
+
+     //Array to string
+     val = String([1,2,3,4]);
+      console.log(val);
+     console.log(typeof val);
+
+     //We can also convert data types using the .toString() method
+     val = (5).toString();
+     console.log(val);
+     console.log(typeof val);
+
+     //Boolean to string
+      val = (true).toString();
+     console.log(val);
+     console.log(typeof val);
+
+     //Turning strings to numbers using the number function
+
+     //String to Number
+     val = Number('5');
+     console.log(val);
+     console.log(typeof val);
+
+     //Boolean to Number
+     val = Number(true);
+     console.log(val);
+     console.log(typeof val);
+
+     val = Number(false);
+     console.log(val);
+     console.log(typeof val);
+
+     //What if we try to convert a string of letters?
+     val = Number('Hello');
+     console.log(val);
+     console.log(typeof val);
+
+     // val returns NaN (not a number) because hello is not a number
+
+     //We can also use parseInt to change strings into numbers
      
+     //String to number
+     val = parseInt('100');
+     console.log(val);
+     console.log(typeof val);
+
+     //If you want to parse data with decimals you have to use parseFloat()
+     val = parseFloat('100.30');
+     console.log(val);
+     console.log(typeof val);
+
    </script>
 </body>
 </html>
