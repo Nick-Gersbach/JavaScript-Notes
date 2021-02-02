@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Switch Statments</title>
+</head>
+<body>
+  <h1>JS Switch Statments</h1>
+  <!-- Notes
+  - Switch statements are a shorthand way of writing if else statements. They are useful when you are testing for many conditions
+   -->
+   <script>
+     const color = 'gray';
+
+     switch(color) {
+       case 'red':
+        console.log('The color is red');
+        break;
+       case 'blue':
+        console.log('The color is blue');
+        break;
+       case 'green':
+        console.log('The color is green');
+        break;
+       case 'red':
+        console.log('The color is orange');
+        break;
+      default:
+        console.log('The color is a mystery...');
+        break;
+     }
+
+    let day;
+
+    //Evaluating the day of the week
+     switch(new Date().getDay()) {
+       case 0:
+         day = 'Sunday';
+         break;
+       case 1:
+         day = 'Monday';
+         break;
+       case 2:
+         day = 'Tuesday';
+         break;
+       case 3:
+         day = 'Wednesy';
+         break;
+       case 4:
+         day = 'Thursday';
+         break;
+       case 5:
+         day = 'Friday';
+         break;
+       case 6:
+         day = 'Saturday';
+         break;
+     }
+
+     console.log(`Today is ${day}`);
+   </script>
+</body>
+</html>
