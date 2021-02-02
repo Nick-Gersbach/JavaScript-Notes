@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Dates & Times</title>
+</head>
+<body>
+  <h1>JS Dates & Times</h1>
+  <!-- Notes
+  - Dates and times are very important in programming. JS has built in date object that we can use.
+
+  - Dates are reference types which makes them objects 
+  -->
+   <script>
+  //Get todays date
+  let today = new Date();
+  console.log(today);
+
+  let val;
+
+  //Change date to a string
+  val = today.toString;
+  console.log(today);
+
+  //Make Date your birthday
+  birthday = new Date('7-25-1991');
+  console.log(birthday);
+
+  //Add time to birthday
+ birthday = new Date('7-25-1991 11:30:00');
+  console.log(birthday);
+
+  //Declare a date with text (alternate syntax)
+  const yadiraBirthday = new Date('April 5 1999');
+  console.log(yadiraBirthday);
+
+  //Get Current Month
+  val = today.getMonth;
+  console.log(val);
+
+  //Get Year 
+  val = today.getFullYear();
+  console.log(val);
+
+  //Get Hours
+  val = today.getHours();
+  console.log(val);
+
+  //Get Minutes
+  val = today.getMinutes();
+   console.log(val);
+
+   //Get Seconds
+   val = today.getSeconds();
+    console.log(val);
+   </script>
+</body>
+</html>
