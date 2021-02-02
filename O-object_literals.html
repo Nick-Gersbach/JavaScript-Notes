@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Object Literals</title>
+</head>
+<body>
+  <h1>JS Object Literals</h1>
+  <!-- Notes
+  
+   -->
+   <script>
+     const person = {
+       firstName: 'Nick',
+       lastName: 'Gersbach',
+       age: 29,
+       email: 'nicholas.gersbach@yahoo.com',
+       hobbies: ['music', 'coding', 'lifting'],
+       address: {
+         city: 'Phoenix',
+         state: 'AZ'
+       }
+     }
+
+     console.log(person);
+
+     let val;
+  
+     //Get a specific value
+     val = person.firstName;
+     console.log(val);
+
+     val = person.lastName;
+     console.log(val);
+
+     val = person.age;
+     console.log(val);
+
+     val = person.hobbies;
+     console.log(val);
+
+     val = person.hobbies[1]; //0 based
+     console.log(val);
+
+    //Array of objects (this is common)
+    const people = [
+      {name: 'Jimmy', age: 29},
+      {name: 'Bob', age: 34}
+    ]
+
+    console.log(people);
+
+    //Loop through an array to get the names only (for loop)
+    for(let i = 0; i < people.length; i++){
+      console.log(people[i].name);
+    }
+
+   </script>
+</body>
+</html>
