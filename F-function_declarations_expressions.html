@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions/Declarations/Expressions</title>
+</head>
+<body>
+  <h1>Functions/Declarations/Expressions</h1>
+  <!-- Notes 
+  - Functions are blocks of code that can be called on command and reused as many times as you need them in a program. 'They are packages of code' - Stefan
+  -->
+  <script>  
+//FUNCTION DECLARATIONS
+
+  //Declaring a Function
+
+  function greet() {
+    console.log('Hello friend');
+  }
+
+  //Calling the function
+  greet();
+
+  //return something from a function (This is what you'll usually do)
+  function myFunc () {
+    return 'I am returning the function'
+  }
+
+  //Calling the function
+  myFunc();// Since we returned it, nothing will be logged.
+
+  console.log(myFunc()); //Now our function will log to the console
+
+  /* PARAMETERS
+  
+  Remember that parameters are just placeholders until you decide what goes in them when you return a value.
+  
+  */
+
+  //Using parameters/arguments in a function
+  function theName(firstName) {
+    return 'My name is ' + firstName;
+  }
+
+  console.log(theName('Nick'));
+
+  //Using multiple paramterters in a function
+  function fullName(firstName, lastName) {
+    return 'My full name is ' + firstName + ' ' + lastName;
+  }
+
+
+  console.log(fullName('Nicholas', 'Gersbach'));
+
+    /* SETTING DEFUALT PARAMETER VALUES
+    
+  We can set Default parameter values when we don't set any parameters before calling our function using if else statements with in our function.
+  
+  Remember that parameters are just placeholders until you decide what goes in them when you return a value.
+  
+  */
+
+  //Declaring a function with default parameters (ES5)
+  function person (firstName, lastName) {
+    if(typeof firstName === 'undefined'){firstName = 'John'}
+    if(typeof lastName === 'undefined'){lastName = 'Doe'}
+    return 'Hello, my name is ' + firstName + ' ' + lastName;
+  }
+
+  console.log(person());
+
+   //Declaring a function with default parameters (ES6) You can just define the defaults in the function name area in the ()
+   function fastLaneMillionare(firstName = 'MJ', lastName = 'Demarco') {
+     return 'I am the OG fastlane millionare, ' + firstName + ' ' + lastName;
+   }
+
+   console.log(fastLaneMillionare());
+
+   //FUNCTION EXPRESSIONS
+
+   /*
+   
+   - A function exression is putting a function as a variable assignment. You are basically storing a function within a variable
+   
+   - When you attach a function to a variable you usually use a anonymous function (a function with no name)
+
+   - Using expressions has advantages when it comes to more advanced topics like hoisting and closures
+   */
+
+  const square = function(x) {
+    return x*x;
+  };
+
+  console.log(square(8));
+
+
+  //IMMEDIATLY INVOAKABLE FUNCTION EXPRESSIONS - (IFFES) - tHESE ARE FUNCTIONS THAT YOU DECLARE AND RUN AT THE SAME TIME
+
+  //These are very useful in the module design pattern
+  (function(){
+    console.log('IFFE ran...');
+  }());
+
+  //Adding Parameter to an IFFE
+  (function(name){
+  console.log('Hello ' + name);
+  })('Nick');
+
+
+  //PROPERTY METHODS (when a function is put inside of an object it is called a... method)
+  const todo = {
+    add: function(){
+      console.log('Add todo...');
+    },
+    edit: function(id) {
+      console.log('Edit todo ' + id);
+    }
+  }
+  todo.add();
+  todo.edit();
+  </script>
+</body>
+</html>
