@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Loops</title>
+</head>
+<body>
+  <h1>JS Loops</h1>
+  <!-- Notes
+  - A loop is an instruction that repeats until a specific condition is reached.
+
+  - Loops allow you to run the same block of code using different values each time.
+
+  - The 3 most used loops are for loops, while loops, and do while loops
+
+  - You'll always need to use var or let when working with loops
+
+  - i and x are most commonly used in loops, but you can use anything
+
+  - When it comes to what type of loop you use, it's mostly personal preference. However, nerds say to use a for loop when you know how many times (iterations) a loop is going to run, and use a while loop when you aren't sure
+
+  FOR LOOPS
+
+  - These loops take in 3 parameters that are seperated by ;
+  - i++ means i = i +1;
+
+  for(let i = 0; i < 10; i++) {
+  console.log(i);
+}
+
+  Example - This for loop example means that...
+  1. i = 0 (let i = 0)
+  2. As long as i is less than 10 (i < 10)
+  3. Add one to i (i++)
+  4 When 10 is reached the loop will stop
+
+
+WHILE LOOP
+- In while loops you only out one condition in the () and everyhting else that you want to do goes in the {}
+let i = 0;
+
+while(i < 10) {
+console.log('Number ' + i)
+i++;
+}
+
+DO WHILE LOOP
+
+- The main difference with do while loops is that they are going to run at least once, no matter what.
+
+let i = 0;
+
+do {
+  console.log('Number ' + i)
+  i++
+}
+
+while(i < 10);
+   -->
+   <script>
+   //FOR LOOP
+for(let i = 0; i < 10; i++) {
+  console.log('Number ' + i);
+}
+
+//Adding another condition to our for loop with if/else
+for(let i = 0; i < 10; i++) {
+  if(i===2) {
+    console.log('2 is my favorite number!')
+    continue; //This gets rid of number 2 and replaces it with the string
+  }
+  console.log('Number ' + i);
+}
+
+//Breaking out of a loop with break;
+for(let i = 0; i < 10; i++) {
+  if(i===2) {
+    console.log('2 is my favorite number!')
+    continue; //This gets rid of number 2 and replaces it with the string
+  }
+  if(i ===5) {
+    console.log('Stop the loop!');
+    break;
+  }
+  console.log('Number ' + i);
+}
+
+//WHILE LOOP
+let i = 0;
+
+while(i < 10) {
+console.log('Number ' + i)
+i++;
+}
+
+//DO WHILE LOOP
+ i = 0;
+
+do {
+  console.log('Number ' + i)
+  i++
+}
+
+while(i < 10);
+
+//Looping through arrays (This is not recommended but it is possible. You should use built in array methods to loop through arrays instead)
+
+const cars = ['BMW', 'Chevy', 'Ford', 'Dodge', 'Audi'];
+
+for (let x = 0; x < cars.length; x++) {
+  console.log(cars[x]);
+}
+
+//FOR EACH ARRAY LOOP (This does the same thing as the array loop above, but it used the build array method forEach which allows us to write a lot less code)
+
+cars.forEach(function(car){
+  console.log(car);
+});
+
+//Map Method - This is usually used to return a different array
+const users = [
+  {id:1, name:'Nick'},
+  {id:2, name:'Bill'},
+  {id:3, name:'John'},
+  {id:4, name:'Buck'},
+]
+
+const ids = users.map(function(user){
+  return user.id;
+});
+
+console.log(ids);
+
+//FOR IN LOOP (This is how you loop through an object and get key value pairs)
+
+const user = {
+  firstName: 'Nick',
+  lastName: 'G',
+  age: 29
+}
+
+for (let x in user) {
+  console.log(`${x} : ${user[x]}`);
+}
+   </script>
+</body>
+</html>
