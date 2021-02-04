@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Block Scope</title>
+</head>
+<body>
+  <h1>Block Scope (Var, Let, Const)</h1>
+  <!-- Notes
+  Variables in functions and blocks are different than variables in the global scope. They can even be the same name and still be different.
+
+  - let and const act this way, var is weird, don't use it.
+   -->
+  <script>
+    //Global Scope
+    var a = 1;
+    let b = 2;
+    const c = 3;
+
+    console.log('Global Scope ', a, b, c);
+
+    //Function Scope
+    function varScope () {
+      var a = 4;
+      let b = 5;
+      const c = 6;
+
+      console.log('Function Scope: ', a, b, c);
+    }
+
+    varScope();
+
+    //Block Scope
+    if(true) {
+       var a = 4;
+      let b = 5;
+      const c = 6;
+    console.log('Block Scope ', a, b, c);
+    };
+  </script>
+</body>
+</html>
