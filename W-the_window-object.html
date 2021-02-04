@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Window Object</title>
+</head>
+<body>
+  <h1>The Window Object</h1>
+
+  <div style='margin-top: 1000px;'></div>
+  <!-- Notes
+  - The window is the global object in client side (Front End) JS
+
+  - You can type window into the console and hit enter to see everything that is in the window object
+
+
+   -->
+   <script>
+    //WINDOW METHODS / OBJECTS / PROPERTIES
+
+    //ALERT
+    // window.alert('Hello Page');
+
+    // //PROMPT 
+    // const input = prompt();
+    // alert(input);
+
+    //CONFIRM (are you sure)
+    // if(confirm('Ae you sure?')) {
+    //   console.log('Yes');
+    // } else {
+    //   console.log('No');
+    // }
+
+    //Get Height & Width of Window
+
+    let val;
+
+    val = window.outerHeight;
+
+    val = window.outerWidth;
+
+    console.log(val);
+
+    
+    //Get Inner Height & Width of Window
+
+    val = window.innerHeight;
+
+    val = window.innerWidth;
+
+    console.log(val);
+
+
+  //Scroll Points (x and y axis when you have scroll bars) (Used when using animations on scroll)
+   val = window.scrollY
+   val = window.scrollX
+   console.log(val);
+
+   //Location Object
+   val = window.location;
+   val = window.location.hostname;
+   val = window.location.port;
+   val = window.location.href;
+   val = window.location.search;
+   console.log(val);
+
+   //Redirect
+  //  window.location.href = 'http://google.com';
+  
+
+   //HISTORY OBJECT Get browsing history
+  val = window.history.go(-1);
+  val = window.history.length;
+  console.log(val);
+
+  //Navigator Object
+  val = window.navigator;
+  console.log(val);
+   </script>
+</body>
+</html>
